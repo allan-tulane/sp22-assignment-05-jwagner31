@@ -14,12 +14,21 @@ def MED(S, T):
         if (S[0] == T[0]):
             return(MED(S[1:], T[1:]))
         else:
-            return(1 + min(MED(S, T[1:]), MED(S[1:], T)))
+            return(1 + min(MED(S, T[1:]), MED(S[1:], T), MED(S[1:],T[1:])))
 
 
 def fast_MED(S, T, MED={}):
-    # TODO -  implement memoization
-    pass
+  
+  if (S == ""):
+    MED[(0, len(T)] = len(T)
+  elif (T == ""):
+    MED[(len(S), 0] = len(S)
+  else:
+    if (S[0] == T[0]):
+      return(MED(S[1:], T[1:]))
+    else:
+      return(1 + min(MED(S, T[1:]), MED(S[1:], T), MED(S[1:],T[1:])))
+
 
 def fast_align_MED(S, T, MED={}):
     # TODO - keep track of alignment
