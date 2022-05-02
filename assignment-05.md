@@ -57,7 +57,6 @@ possible?
 
 **enter answer in `answers.md`**
 
-
 ## Part 3: Edit Distance
 
 In class we proved an optimal substructure property for the **Edit
